@@ -1,0 +1,6 @@
+devel_space: /home/mayur/autonomous/devel
+install: false
+install_space: /home/mayur/autonomous/install
+profile: default
+source_space: /home/mayur/autonomous/src
+workspace: /home/mayur/autonomous

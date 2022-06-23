@@ -1,0 +1,1 @@
+/home/mayur/autonomous/devel/.private/perception/lib/pkgconfig/perception.pc
