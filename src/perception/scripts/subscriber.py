@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-#import all the library
 import rospy
 from std_msgs.msg import String
-def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+class subscriber:
+    def __init__(self):
+        self.rossetup()      
         
-def listener():
- 
-
-    rospy.init_node('listener', anonymous=True)
- 
-    rospy.Subscriber("chatter", String, callback)
-   
-       # spin() simply keeps python from exiting until this node is stopped
+    def rossetup(self):
+        rospy.init_node('subscriber',anonymous=True)
+        rospy.Subscriber('/chatter',String,self.callback,queue_size=10)
+        
+    def callback(self,data):
+        rospy.loginfo("publish data%s", data)
+        
+if __name__=='__main__':
+    subscriber()
     rospy.spin()
-if __name__ == '__main__':
-    listener()

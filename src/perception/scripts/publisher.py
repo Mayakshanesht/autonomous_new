@@ -18,15 +18,13 @@ class publisher:
         """
     def loop(self):
         while not rospy.is_shutdown():
-            data="hello ros%s" %rospy.get_time()
-            rospy.loginfo(data)
-            self.pub.publish(data)
+            self.data="hello ros%s" %rospy.get_time()
+            rospy.loginfo(self.data)
+            self.pub.publish(self.data)
             self.rate.sleep()
 if __name__=='__main__':
     try:
         node1=publisher()
-        node1.rossetup()
-        node1.loop()
     except rospy.ROSInterruptException:
         pass
 
