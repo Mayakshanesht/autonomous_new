@@ -9,7 +9,7 @@ roscore
 source devel/setup.bash
 #step 5 navigate to script directory
 cd src/perception/scripts/
-# step 6 run the publisher node
+#step 6 run the publisher node
 rosrun perception publisher.py
-# repeat steps 4 and 5
+#repeat steps 4 and 5
 rosrun perception subscriber.py
